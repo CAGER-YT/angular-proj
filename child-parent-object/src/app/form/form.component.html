@@ -1,0 +1,19 @@
+<p>form works!</p>
+
+<form>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="name">
+    </div>
+    
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" [(ngModel)]="price">
+    </div>
+    
+    <div>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" [(ngModel)]="author">
+    </div>
+</form>
+<button (click)="submit()">Add Book</button>

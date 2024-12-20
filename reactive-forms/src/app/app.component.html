@@ -1,0 +1,33 @@
+<form [formGroup]="myform" (submit)="submit()">
+  <label>Name:</label>
+  <input type="text" formControlName="name" >
+  <br>
+  <span *ngIf="name?.invalid && name?.touched">
+    <span *ngIf="name?.errors?.['required']">Name is Mandatory</span>
+    <span *ngIf="name?.errors?.['maxlength']" >Name should be only 5 characters</span>
+  </span>
+  <br>
+  <div>
+    <label for="age">Age:</label>
+    <input id="age" formControlName="age">
+    <div *ngIf="age?.invalid && (age?.dirty || age?.touched)">
+      <div *ngIf="age?.errors?.['required']">Age is required.</div>
+      <div *ngIf="age?.errors?.['min']">Age must be at least 18.</div>
+    </div>
+  </div>
+  <br>
+  <div formGroupName="address">
+    <label>Address</label>
+    <br>
+    <label>Door</label>
+    <input type="text" formControlName="door">
+    <span *ngIf="door?.invalid && door?.touched">
+      <span *ngIf="door?.errors?.['required']">Door is Mandatory</span>
+    </span>
+    <br>
+    <label>City</label>
+    <input type="text" formControlName="city">
+    <br>
+  </div>
+  <button type="submit">Submit</button>
+</form>

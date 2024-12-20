@@ -1,0 +1,5 @@
+<div class="bottom-sheet-overlay" *ngIf="isOpen" (click)="closeSheet()"></div>
+<div class="bottom-sheet" [ngClass]="customClass" *ngIf="isOpen">
+  <button class="close-button" (click)="closeSheet()">Close</button>
+  <ng-content></ng-content> <!-- Content goes here -->
+</div>

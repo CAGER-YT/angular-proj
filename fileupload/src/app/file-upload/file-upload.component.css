@@ -1,0 +1,4 @@
+/* Add any styles you need for the file upload component */
+input[type="file"] {
+    margin: 10px 0;
+  }

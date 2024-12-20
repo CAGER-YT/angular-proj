@@ -1,0 +1,46 @@
+  <span>{{ title }} app is running!</span>
+  <!-- Resources -->
+  <span class="spacer" id="name">{{name}}</span>
+
+  <span>Database</span>
+  <ol>
+    <li>Mysql</li>
+    <li>MongoDB</li>
+    <li>Postgres</li>
+    <li>Sqlite</li>
+  </ol>
+  <span>Backend</span>
+  <ul>
+    <li>Node</li>
+    <li>Express</li>
+    <li>Adonis</li>
+  </ul>
+  <input type="text" placeholder="Enter your name" [value]="title"/>
+  <br>
+  <input type="text" placeholder="Enter your email"/>
+  <br>
+  <!-- <button ="alerrt()">Submit</button> -->
+  <h1>{{name}}</h1>
+<button (click)="alerrt()">Submit</button>
+
+  <img src="../favicon.ico" alt="">
+
+  <h1>{{n+n2}}</h1>
+  <h2>{{n}}+{{n2}}</h2>
+  <h3>My Name is {{name}}</h3>
+
+  <div [ngSwitch]="currentDay">
+    <p *ngSwitchCase="0">Today is: Sunday</p>
+    <p *ngSwitchCase="1">Today is: Monday</p>
+    <p *ngSwitchCase="2">Today is: Tuesday</p>
+    <p *ngSwitchCase="3">Today is: Wednesday</p>
+    <p *ngSwitchCase="4">Today is: Thursday</p>
+    <p *ngSwitchCase="5">Today is: Friday</p>
+    <p *ngSwitchCase="6">Today is: Saturday</p>
+    <p *ngSwitchDefault>Invalid day</p>
+  </div>
+
+
+
+
+  

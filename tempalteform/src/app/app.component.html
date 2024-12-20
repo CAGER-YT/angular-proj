@@ -1,0 +1,16 @@
+<form #MyForm="ngForm" (submit)="submitForm(MyForm)">
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="title" name="title" required maxlength="5" #Input="ngModel">
+    <!-- <span *ngIf="Input.valid==false && Input.dirty==true">Input is mandatory</span> -->
+
+    <span *ngIf="Input.valid==false && Input.touched==true">Input is touched</span>
+
+    <!-- <span *ngIf="Input.name.length==5 && Input.dirty==true">Input should be only 5 characters</span> -->
+
+    <span *ngIf="Input.invalid ==false && Input.touched ==true">
+      <span *ngIf="Input.errors?.["required"] && Input.dirty ==true">Only 5 Characters Allowed</span>
+    </span>
+    
+
+    <button type="submit">Submit</button>
+    </form>

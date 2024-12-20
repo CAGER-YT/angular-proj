@@ -1,0 +1,6 @@
+<!-- list.component.html -->
+<app-form (message)="recieveData($event)"></app-form>
+
+<ul>
+    <li *ngFor="let message of messages">{{ message }}</li>
+  </ul>

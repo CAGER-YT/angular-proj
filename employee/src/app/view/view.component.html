@@ -1,0 +1,11 @@
+<div *ngIf="employee" class="employee-details">
+  <h2>Employee Details</h2>
+  <p><strong>ID:</strong> {{ employee.id }}</p>
+  <p><strong>Name:</strong> {{ employee.name }}</p>
+  <p><strong>Age:</strong> {{ employee.age }}</p>
+  <p><strong>Gender:</strong> {{ employee.gender }}</p>
+  <p><strong>Salary:</strong> {{ employee.salary }}</p>
+</div>
+<div *ngIf="!employee">
+  <p>No employee data available.</p>
+</div>

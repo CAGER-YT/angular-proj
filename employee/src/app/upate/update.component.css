@@ -1,0 +1,63 @@
+/* Ensure the form takes up the full width of its container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  /* Style each form element */
+  div {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Input styling */
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    font-size: 16px;
+  }
+  
+  /* Add some spacing between input fields and buttons */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Required field indication */
+  input[required] {
+    border-color: #dc3545;
+  }
+  
+  /* Error message styling (if you want to add error messages later) */
+  .error-message {
+    color: #dc3545;
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,11 @@
+<p>form works!</p>
+<input type="text" [(ngModel)]="name" name="name"/>
+<button (click)="submit()">Submit</button>  
+<input accesskey="k" type="checkbox" [(ngModel)]="isClicked" name="isChecked" />
+
+<app-list *ngIf ="isClicked" [txt]="names"></app-list>
+<!-- <div *ngIf="isClicked == true then list">
+    </div>
+    <ng-template #list>
+        <app-list [txt]="names"></app-list>
+    </ng-template> -->

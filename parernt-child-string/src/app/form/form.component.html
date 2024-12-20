@@ -1,0 +1,7 @@
+<p>form works!</p>
+<form (ngSubmit)="submit()">
+  <label>Name:</label>
+  <input [(ngModel)]="nameInput" name="nameInput">
+  <button type="submit">Submit</button>
+</form>
+<app-list [name]="name"></app-list>

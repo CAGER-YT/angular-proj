@@ -1,0 +1,61 @@
+<h2>{{nums[0]}}</h2>
+<h2>{{nums[1]}}</h2>
+<h2>{{nums[2]}}</h2>
+<h2>{{nums[3]}}</h2>
+<h2>{{nums[4]}}</h2>
+<ol>
+  <li *ngFor="let n of nums">{{n}}</li>
+</ol>
+<ul>
+  <li *ngFor="let n of nums">{{n}}</li>
+</ul>
+<h2>{{names[2]}}</h2>
+<ul>
+  <li *ngFor="let name of names">{{name | uppercase}}</li>
+</ul>
+
+<input type="text" [(ngModel)]="data"/>
+<button (click)="submit()">submit</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+  <tr>
+    <td>{{emp.name}}</td>
+    <td>{{emp.age}}</td>
+    <td>{{emp.gender}}</td>
+  </tr>
+</table>
+
+
+<input type="text"[(ngModel)]="emp.name">
+
+<input type="text"[(ngModel)]="emp.age">
+
+<input type="text"[(ngModel)]="emp.gender">
+
+<button (click)="submitemps()">create</button>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td *ngFor ="let e of emps">{{e.name}}</td>
+    <td *ngFor ="let e of emps">{{e.age}}</td>
+    <td *ngFor ="let e of emps">{{e.gender}}</td>
+  </tr>
+</tbody>
+</table>
+
+<app-studentarray></app-studentarray>

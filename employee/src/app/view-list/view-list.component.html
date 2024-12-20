@@ -1,0 +1,40 @@
+<div class="filter-container">
+    <input type="text" placeholder="Search by name" [(ngModel)]="filterName" (input)="applyFilters()">
+    <input type="number" placeholder="Min Age" [(ngModel)]="filterMinAge" (input)="applyFilters()">
+    <input type="number" placeholder="Max Age" [(ngModel)]="filterMaxAge" (input)="applyFilters()">
+    <select [(ngModel)]="filterGender" (change)="applyFilters()">
+      <option value="">All Genders</option>
+      <option value="M">Male</option>
+      <option value="F">Female</option>
+    </select>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of filteredEmps | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>
+          <button (click)="viewEmployee(employee.id)">view</button>
+          <button (click)="updateEmployee(employee.id)">edit</button>
+          <button (click)="deleteEmployee(employee.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Pagination Controls -->
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
