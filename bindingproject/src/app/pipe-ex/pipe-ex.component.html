@@ -1,0 +1,20 @@
+<!-- <p>pipe-ex works!</p>
+<h1>{{name|slice :3:4}}</h1>
+<h1>{{name|uppercase}}</h1>
+<h1>{{price|currency}}</h1>
+<h1>{{price|currency:"INR"}}</h1>
+<h1>{{price|currency:"INR":false}}</h1>
+<h1>{{ dateValue | date: "medium" }}</h1>
+<h1>{{ dateValue | date: "short" }}</h1>
+<h1>{{ dateValue | date: "fulldate" }}</h1>
+<h1>{{ dateValue | date: "longdate" }}</h1>-->
+<p>pipe-ex works!</p>
+<h1 [class.dance]="isDancing">{{ name | slice: 3: 4 }}</h1>
+<h1 [class.dance]="isDancing">{{ name | uppercase }}</h1>
+<h1 [class.dance]="isDancing">{{ price | currency }}</h1>
+<h1 [class.dance]="isDancing">{{ price | currency:'INR' }}</h1>
+<h1 [class.dance]="isDancing">{{ price | currency:'INR':false }}</h1>
+<h1 [class.dance]="isDancing">{{ dateValue | date: 'medium' }}</h1>
+<h1 [class.dance]="isDancing">{{ dateValue | date: 'short' }}</h1>
+<h1 [class.dance]="isDancing">{{ dateValue | date: 'fullDate' }}</h1>
+<h1 [class.dance]="isDancing">{{ dateValue | date: 'longDate' }}</h1>

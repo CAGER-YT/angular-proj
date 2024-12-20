@@ -1,0 +1,17 @@
+<p>get works!</p>
+<table class="course-table">
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Course Fee</th>
+        <th>Course Duration (days)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of cmp">
+        <td>{{ course.coursename }}</td>
+        <td>{{ course.coursefee }}</td>
+        <td>{{ course.coursedurationdays }}</td>
+      </tr>
+    </tbody>
+  </table>

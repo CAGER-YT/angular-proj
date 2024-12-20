@@ -1,0 +1,12 @@
+<p>if-ex works!</p>
+<div *ngIf="isMale; then male else female"></div>
+
+<ng-template #male>
+  <h1>Male</h1>
+</ng-template>
+
+<ng-template #female>
+  <h1>Female</h1>
+</ng-template>
+
+<input type="checkbox" [(ngModel)]="isMale">

@@ -1,0 +1,12 @@
+/* Define the dance animation */
+@keyframes dance {
+    0%, 100% { transform: translateY(0); }
+    25%, 75% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+  }
+  
+  /* Apply the dance animation to elements with the 'dance' class */
+  .dance {
+    animation: dance 1s ease-in-out infinite;
+  }
+  

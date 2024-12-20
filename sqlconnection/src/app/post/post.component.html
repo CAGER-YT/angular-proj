@@ -1,0 +1,18 @@
+<!-- post.component.html -->
+<p>Post Component</p>
+
+<form>
+  <label for="coursename">Course Name:</label>
+  <input type="text" [(ngModel)]="emp.coursename" id="coursename" name="coursename">
+  <br><br>
+  
+  <label for="coursefee">Course Fee:</label>
+  <input type="number" [(ngModel)]="emp.coursefee" id="coursefee" name="coursefee">
+  <br><br>
+  
+  <label for="coursedurationdays">Course Duration (Days):</label>
+  <input type="number" [(ngModel)]="emp.coursedurationdays" id="coursedurationdays" name="coursedurationdays">
+  <br><br>
+  
+  <button type="button" (click)="clickit()">Submit</button>
+</form>

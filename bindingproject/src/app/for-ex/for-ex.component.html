@@ -1,0 +1,55 @@
+<p>for-ex works!</p>
+<style>
+    @keyframes gangnam {
+      0% { transform: translateY(0); }
+      20% { transform: translateY(-10px) rotate(5deg); }
+      40% { transform: translateY(10px) rotate(-5deg); }
+      60% { transform: translateY(-10px) rotate(5deg); }
+      80% { transform: translateY(10px) rotate(-5deg); }
+      100% { transform: translateY(0); }
+    }
+  
+    .gangnam-style {
+      animation: gangnam 1s ease-in-out infinite;
+    }
+  </style>
+<ul>
+    <li *ngFor="let a of names">
+        {{a}}
+    </li>
+</ul>
+<!-- <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of emp" class="gangnam-style">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.designation }}</td>
+        <td>{{ employee.salary }}</td>
+      </tr>
+    </tbody>
+  </table> -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let employee of emp; let i = index">
+        <tr [ngClass]="{ 'dance-step1': i % 3 === 0, 'dance-step2': i % 3 === 1, 'dance-step3': i % 3 === 2 }">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.designation }}</td>
+          <td>{{ employee.salary }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  
